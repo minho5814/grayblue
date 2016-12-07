@@ -29,7 +29,7 @@
 
 	<!-- 세번째 영역 -->
 	<div id="third" class="parallax-box">
-		
+
 	</div>
 
 	<!-- 다섯번째 영역 -->
@@ -52,6 +52,23 @@ $(window).load(function(){
 	$('#second').parallax("50%", 0.3);
 	$('#third').parallax("50%", 0.3);
 	$('#second .bg').parallax("50%", 0.4);
+
+	$(window).scroll(function(){
+		var winScroll = $(window).scrollTop();
+		var $direct=$('.parallax-box');
+		$direct.each(function(index){
+			$directOffset=$direct.eq(index).offset().top - 300;
+			if (winScroll >= $directOffset) {
+				$('.nav li').eq(index).addClass('on').siblings().removeClass('on');
+			}
+		});
+
+		//마지막 컨텐츠
+		if(winScroll == $(document).height()-$(window).height()){
+			$('.nav li:last-child').addClass('on').siblings().removeClass('on');
+		}
+	});
+	$(window).scroll();// 윈도우 로딩 시 스크롤 호출
 });
 </script>
 
