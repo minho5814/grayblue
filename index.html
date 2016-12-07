@@ -18,8 +18,11 @@
 	</ul>
 
 	<!-- 첫째 영역 -->
-	<div id="intro" class="parallax-box">
-
+	<div id="intro" class="parallax-box slide-area">
+		<div class="slide-box box1"></div>
+		<div class="slide-box box2"></div>
+		<div class="slide-box box3"></div>
+		<div class="slide-box box4"></div>
 	</div>
 
 	<!-- 두번째 영역 -->
@@ -48,7 +51,7 @@
 $(window).load(function(){
 	$('.nav').localScroll(500);
 
-	$('#intro').parallax("50%", 0.3);
+	$('#intro .slide-box').parallax("50%", 0.3);
 	$('#second').parallax("50%", 0.3);
 	$('#third').parallax("50%", 0.3);
 	$('#second .bg').parallax("50%", 0.4);
@@ -69,6 +72,38 @@ $(window).load(function(){
 		}
 	});
 	$(window).scroll();// 윈도우 로딩 시 스크롤 호출
+
+
+
+	$('.slide-area').each(function(){
+		var boxLen = $(this).find('.slide-box').length;
+		if(boxLen >= 2){
+			$(this).append('<button type="button" class="btn-prev">이전</button><button type="button" class="btn-next">다음</button>');
+		}
+	});
+
+	$('.slide-box').each(function(){
+		var idx = $(this).index();
+		var boxW = $(this).outerWidth();
+		$(this).css({'left':boxW*idx});
+	});
+
+	/*
+	var pgVar = 0;
+	$(document).on('click', '.slide-area button', function(){
+		if($(this).hasClass('btn-next')){
+			if(pgVar < boxLen){
+				pgVar++;
+				$(this).find('.slide-box').animate({'left':'-=100%'},300);
+			};
+		} else {
+			if(pgVar > 0){
+				pgVar--;
+				$(this).find('.slide-box').animate({'left':'+=100%'},300);
+			};
+		};
+	});
+	*/
 });
 </script>
 
