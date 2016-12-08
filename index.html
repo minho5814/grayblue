@@ -78,32 +78,42 @@ $(window).load(function(){
 	$('.slide-area').each(function(){
 		var boxLen = $(this).find('.slide-box').length;
 		if(boxLen >= 2){
-			$(this).append('<button type="button" class="btn-prev">이전</button><button type="button" class="btn-next">다음</button>');
+			$(this).append('<button type="button" class="btn-prev" style="display:none;">이전</button><button type="button" class="btn-next">다음</button>');
 		}
+
+		var pgVar = 0;
+		$('.slide-area button').click( function(){
+			if($(this).hasClass('btn-next')){
+				if(pgVar < boxLen - 1){
+					pgVar++;
+					$(this).parents('.slide-area').find('.slide-box').animate({'left':'-=100%'},300);
+					$(this).parents('.slide-area').find('.btn-prev').show();
+					if(pgVar == boxLen - 1){
+						$(this).parents('.slide-area').find('.btn-next').hide();
+					}
+				};
+			} else {
+				if(pgVar > 0){
+					pgVar--;
+					$(this).parents('.slide-area').find('.slide-box').animate({'left':'+=100%'},300);
+				};
+				$(this).parents('.slide-area').find('.btn-next').show();
+				if(pgVar == 0){
+					$(this).parents('.slide-area').find('.btn-prev').hide();
+				}
+			};
+		});
 	});
 
-	$('.slide-box').each(function(){
-		var idx = $(this).index();
-		var boxW = $(this).outerWidth();
-		$(this).css({'left':boxW*idx});
-	});
-
-	/*
-	var pgVar = 0;
-	$(document).on('click', '.slide-area button', function(){
-		if($(this).hasClass('btn-next')){
-			if(pgVar < boxLen){
-				pgVar++;
-				$(this).find('.slide-box').animate({'left':'-=100%'},300);
-			};
-		} else {
-			if(pgVar > 0){
-				pgVar--;
-				$(this).find('.slide-box').animate({'left':'+=100%'},300);
-			};
-		};
-	});
-	*/
+	resizeSlide();
+	$(window).resize(resizeSlide);
+	function resizeSlide(){
+		$('.slide-box').each(function(){
+			var idx = $(this).index();
+			var boxW = $(this).outerWidth();
+			$(this).css({'left':boxW*idx});
+		});
+	}
 });
 </script>
 
