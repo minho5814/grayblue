@@ -22,23 +22,32 @@
 		<div class="slide-box box1"></div>
 		<div class="slide-box box2"></div>
 		<div class="slide-box box3"></div>
-		<div class="slide-box box4"></div>
 	</div>
 
 	<!-- 두번째 영역 -->
-	<div id="second" class="parallax-box">
+	<div id="second" class="parallax-box slide-area">
+		<!--
 		<div class="bg"></div>
+		-->
+		<div class="slide-box box1"></div>
+		<div class="slide-box box2"></div>
+		<div class="slide-box box3"></div>
 	</div>
 
 	<!-- 세번째 영역 -->
-	<div id="third" class="parallax-box">
-
+	<div id="third" class="parallax-box slide-area">
+		<div class="slide-box box1"></div>
+		<div class="slide-box box2"></div>
+		<div class="slide-box box3"></div>
 	</div>
 
-	<!-- 다섯번째 영역 -->
-	<div id="fifth" class="parallax-box">
-
+	<!-- 다섯번째 영역
+	<div id="fifth" class="parallax-box slide-area">
+		<div class="slide-box box1"></div>
+		<div class="slide-box box2"></div>
+		<div class="slide-box box3"></div>
 	</div>
+	 -->
 </div>
 
 <!-- Script -->
@@ -52,8 +61,8 @@ $(window).load(function(){
 	$('.nav').localScroll(500);
 
 	$('#intro .slide-box').parallax("50%", 0.3);
-	$('#second').parallax("50%", 0.3);
-	$('#third').parallax("50%", 0.3);
+	$('#second .slide-box').parallax("50%", 0.3);
+	$('#third .slide-box').parallax("50%", 0.3);
 	$('#second .bg').parallax("50%", 0.4);
 
 	$(window).scroll(function(){
@@ -80,29 +89,84 @@ $(window).load(function(){
 		if(boxLen >= 2){
 			$(this).append('<button type="button" class="btn-prev" style="display:none;">이전</button><button type="button" class="btn-next">다음</button>');
 		}
+	});
 
-		var pgVar = 0;
-		$('.slide-area button').click( function(){
-			if($(this).hasClass('btn-next')){
-				if(pgVar < boxLen - 1){
-					pgVar++;
-					$(this).parents('.slide-area').find('.slide-box').animate({'left':'-=100%'},300);
-					$(this).parents('.slide-area').find('.btn-prev').show();
-					if(pgVar == boxLen - 1){
-						$(this).parents('.slide-area').find('.btn-next').hide();
-					}
-				};
-			} else {
-				if(pgVar > 0){
-					pgVar--;
-					$(this).parents('.slide-area').find('.slide-box').animate({'left':'+=100%'},300);
-				};
-				$(this).parents('.slide-area').find('.btn-next').show();
-				if(pgVar == 0){
-					$(this).parents('.slide-area').find('.btn-prev').hide();
+	// 첫번째 슬라이드 영역
+	var pgVar01 = 0;
+	$('#intro button').click( function(){
+		var boxLen = $(this).parents('#intro').find('.slide-box').length;
+		if($(this).hasClass('btn-next')){
+			if(pgVar01 < boxLen - 1){
+				pgVar01++;
+				$(this).parents('#intro').find('.slide-box').animate({'left':'-=100%'},300);
+				$(this).parents('#intro').find('.btn-prev').show();
+				if(pgVar01 == boxLen - 1){
+					$(this).parents('#intro').find('.btn-next').hide();
 				}
+				console.log(pgVar01);
 			};
-		});
+		} else {
+			if(pgVar01 > 0){
+				pgVar01--;
+				$(this).parents('#intro').find('.slide-box').animate({'left':'+=100%'},300);
+			};
+			$(this).parents('#intro').find('.btn-next').show();
+			if(pgVar01 == 0){
+				$(this).parents('#intro').find('.btn-prev').hide();
+			}
+		};
+	});
+
+	// 두번째 슬라이드 영역
+	var pgVar02 = 0;
+	$('#second button').click( function(){
+		var boxLen = $(this).parents('#second').find('.slide-box').length;
+		if($(this).hasClass('btn-next')){
+			if(pgVar02 < boxLen - 1){
+				pgVar02++;
+				$(this).parents('#second').find('.slide-box').animate({'left':'-=100%'},300);
+				$(this).parents('#second').find('.btn-prev').show();
+				if(pgVar02 == boxLen - 1){
+					$(this).parents('#second').find('.btn-next').hide();
+				}
+				console.log(pgVar02);
+			};
+		} else {
+			if(pgVar02 > 0){
+				pgVar02--;
+				$(this).parents('#second').find('.slide-box').animate({'left':'+=100%'},300);
+			};
+			$(this).parents('#second').find('.btn-next').show();
+			if(pgVar02 == 0){
+				$(this).parents('#second').find('.btn-prev').hide();
+			}
+		};
+	});
+
+	// 세번째 슬라이드 영역
+	var pgVar03 = 0;
+	$('#third button').click( function(){
+		var boxLen = $(this).parents('#third').find('.slide-box').length;
+		if($(this).hasClass('btn-next')){
+			if(pgVar03 < boxLen - 1){
+				pgVar03++;
+				$(this).parents('#third').find('.slide-box').animate({'left':'-=100%'},300);
+				$(this).parents('#third').find('.btn-prev').show();
+				if(pgVar03 == boxLen - 1){
+					$(this).parents('#third').find('.btn-next').hide();
+				}
+				console.log(pgVar03);
+			};
+		} else {
+			if(pgVar03 > 0){
+				pgVar03--;
+				$(this).parents('#third').find('.slide-box').animate({'left':'+=100%'},300);
+			};
+			$(this).parents('#third').find('.btn-next').show();
+			if(pgVar03 == 0){
+				$(this).parents('#third').find('.btn-prev').hide();
+			}
+		};
 	});
 
 	resizeSlide();

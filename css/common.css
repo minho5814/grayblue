@@ -120,14 +120,21 @@ button {outline:0;vertical-align:top;}
 	color:#fff;
 	font-size:50px;
 }
-#intro .slide-box.box1 {background:url(../img/firstBG.jpg) no-repeat 50% 0 fixed;}
-#intro .slide-box.box2 {background:url(../img/secondBG.jpg) no-repeat 50% 0 fixed;}
-#intro .slide-box.box3 {background:url(../img/firstBG.jpg) no-repeat 50% 0 fixed;}
-#intro .slide-box.box4 {background:url(../img/secondBG.jpg) no-repeat 50% 0 fixed;}
+#intro .slide-box.box1 {background:url(../img/bg_color01_01.jpg) no-repeat 50% 0 fixed;}
+#intro .slide-box.box2 {background:url(../img/bg_color01_02.jpg) no-repeat 50% 0 fixed;}
+#intro .slide-box.box3 {background:url(../img/bg_color01_03.jpg) no-repeat 50% 0 fixed;}
 
-#second {background:url(../img/secondBG.jpg) no-repeat 50% 0 fixed;}
-#third {background:url(../img/thirdBG.jpg) no-repeat 50% 0 fixed;}
-#fifth {background-color:#ccc;}
+#second .slide-box.box1 {background:url(../img/bg_color02_01.jpg) no-repeat 50% 0 fixed;}
+#second .slide-box.box2 {background:url(../img/bg_color02_02.jpg) no-repeat 50% 0 fixed;}
+#second .slide-box.box3 {background:url(../img/bg_color02_03.jpg) no-repeat 50% 0 fixed;}
+
+#third .slide-box.box1 {background:url(../img/bg_color03_01.jpg) no-repeat 50% 0 fixed;}
+#third .slide-box.box2 {background:url(../img/bg_color03_02.jpg) no-repeat 50% 0 fixed;}
+#third .slide-box.box3 {background:url(../img/bg_color03_03.jpg) no-repeat 50% 0 fixed;}
+
+#fifth .slide-box.box1 {background:url(../img/bg_color04_01.jpg) no-repeat 50% 0 fixed;}
+#fifth .slide-box.box2 {background:url(../img/bg_color04_02.jpg) no-repeat 50% 0 fixed;}
+#fifth .slide-box.box3 {background:url(../img/bg_color04_03.jpg) no-repeat 50% 0 fixed;}
 
 #second .bg {
 	position:absolute;
