@@ -14,7 +14,10 @@
 		<li><a href="#intro" title="Next Section"></a></li>
 		<li><a href="#second" title="Next Section"></a></li>
 		<li><a href="#third" title="Next Section"></a></li>
+		<li><a href="#four" title="Next Section"></a></li>
 		<li><a href="#fifth" title="Next Section"></a></li>
+		<li><a href="#six" title="Next Section"></a></li>
+		<li><a href="#seven" title="Next Section"></a></li>
 	</ul>
 
 	<!-- 첫째 영역 -->
@@ -22,6 +25,10 @@
 		<div class="slide-box box1"></div>
 		<div class="slide-box box2"></div>
 		<div class="slide-box box3"></div>
+		<div class="slide-box box4"></div>
+		<div class="slide-box box5"></div>
+		<div class="slide-box box6"></div>
+		<div class="slide-box box7"></div>
 	</div>
 
 	<!-- 두번째 영역 -->
@@ -32,6 +39,10 @@
 		<div class="slide-box box1"></div>
 		<div class="slide-box box2"></div>
 		<div class="slide-box box3"></div>
+		<div class="slide-box box4"></div>
+		<div class="slide-box box5"></div>
+		<div class="slide-box box6"></div>
+		<div class="slide-box box7"></div>
 	</div>
 
 	<!-- 세번째 영역 -->
@@ -39,15 +50,55 @@
 		<div class="slide-box box1"></div>
 		<div class="slide-box box2"></div>
 		<div class="slide-box box3"></div>
+		<div class="slide-box box4"></div>
+		<div class="slide-box box5"></div>
+		<div class="slide-box box6"></div>
+		<div class="slide-box box7"></div>
 	</div>
 
-	<!-- 다섯번째 영역
+	<!-- 네번째 영역 -->
+	<div id="four" class="parallax-box slide-area">
+		<div class="slide-box box1"></div>
+		<div class="slide-box box2"></div>
+		<div class="slide-box box3"></div>
+		<div class="slide-box box4"></div>
+		<div class="slide-box box5"></div>
+		<div class="slide-box box6"></div>
+		<div class="slide-box box7"></div>
+	</div>
+
+	<!-- 다섯번째 영역 -->
 	<div id="fifth" class="parallax-box slide-area">
 		<div class="slide-box box1"></div>
 		<div class="slide-box box2"></div>
 		<div class="slide-box box3"></div>
+		<div class="slide-box box4"></div>
+		<div class="slide-box box5"></div>
+		<div class="slide-box box6"></div>
+		<div class="slide-box box7"></div>
 	</div>
-	 -->
+
+	<!-- 여섯번째 영역 -->
+	<div id="six" class="parallax-box slide-area">
+		<div class="slide-box box1"></div>
+		<div class="slide-box box2"></div>
+		<div class="slide-box box3"></div>
+		<div class="slide-box box4"></div>
+		<div class="slide-box box5"></div>
+		<div class="slide-box box6"></div>
+		<div class="slide-box box7"></div>
+	</div>
+
+	<!-- 일곱번째 영역 -->
+	<div id="seven" class="parallax-box slide-area">
+		<div class="slide-box box1"></div>
+		<div class="slide-box box2"></div>
+		<div class="slide-box box3"></div>
+		<div class="slide-box box4"></div>
+		<div class="slide-box box5"></div>
+		<div class="slide-box box6"></div>
+		<div class="slide-box box7"></div>
+	</div>
 </div>
 
 <!-- Script -->
@@ -63,7 +114,12 @@ $(window).load(function(){
 	$('#intro .slide-box').parallax("50%", 0.3);
 	$('#second .slide-box').parallax("50%", 0.3);
 	$('#third .slide-box').parallax("50%", 0.3);
-	$('#second .bg').parallax("50%", 0.4);
+	$('#four .slide-box').parallax("50%", 0.3);
+	$('#fifth .slide-box').parallax("50%", 0.3);
+	$('#six .slide-box').parallax("50%", 0.3);
+	$('#seven .slide-box').parallax("50%", 0.3);
+
+	//$('#second .bg').parallax("50%", 0.4);
 
 	$(window).scroll(function(){
 		var winScroll = $(window).scrollTop();
@@ -165,6 +221,110 @@ $(window).load(function(){
 			$(this).parents('#third').find('.btn-next').show();
 			if(pgVar03 == 0){
 				$(this).parents('#third').find('.btn-prev').hide();
+			}
+		};
+	});
+
+	// 네번째 슬라이드 영역
+	var pgVar04 = 0;
+	$('#four button').click( function(){
+		var boxLen = $(this).parents('#four').find('.slide-box').length;
+		if($(this).hasClass('btn-next')){
+			if(pgVar04 < boxLen - 1){
+				pgVar04++;
+				$(this).parents('#four').find('.slide-box').animate({'left':'-=100%'},300);
+				$(this).parents('#four').find('.btn-prev').show();
+				if(pgVar04 == boxLen - 1){
+					$(this).parents('#four').find('.btn-next').hide();
+				}
+				console.log(pgVar04);
+			};
+		} else {
+			if(pgVar04 > 0){
+				pgVar04--;
+				$(this).parents('#four').find('.slide-box').animate({'left':'+=100%'},300);
+			};
+			$(this).parents('#four').find('.btn-next').show();
+			if(pgVar04 == 0){
+				$(this).parents('#four').find('.btn-prev').hide();
+			}
+		};
+	});
+
+	// 다섯번째 슬라이드 영역
+	var pgVar05 = 0;
+	$('#fifth button').click( function(){
+		var boxLen = $(this).parents('#fifth').find('.slide-box').length;
+		if($(this).hasClass('btn-next')){
+			if(pgVar05 < boxLen - 1){
+				pgVar05++;
+				$(this).parents('#fifth').find('.slide-box').animate({'left':'-=100%'},300);
+				$(this).parents('#fifth').find('.btn-prev').show();
+				if(pgVar05 == boxLen - 1){
+					$(this).parents('#fifth').find('.btn-next').hide();
+				}
+				console.log(pgVar05);
+			};
+		} else {
+			if(pgVar05 > 0){
+				pgVar05--;
+				$(this).parents('#fifth').find('.slide-box').animate({'left':'+=100%'},300);
+			};
+			$(this).parents('#fifth').find('.btn-next').show();
+			if(pgVar05 == 0){
+				$(this).parents('#fifth').find('.btn-prev').hide();
+			}
+		};
+	});
+
+	// 여섯번째 슬라이드 영역
+	var pgVar06 = 0;
+	$('#six button').click( function(){
+		var boxLen = $(this).parents('#six').find('.slide-box').length;
+		if($(this).hasClass('btn-next')){
+			if(pgVar06 < boxLen - 1){
+				pgVar06++;
+				$(this).parents('#six').find('.slide-box').animate({'left':'-=100%'},300);
+				$(this).parents('#six').find('.btn-prev').show();
+				if(pgVar06 == boxLen - 1){
+					$(this).parents('#six').find('.btn-next').hide();
+				}
+				console.log(pgVar06);
+			};
+		} else {
+			if(pgVar06 > 0){
+				pgVar06--;
+				$(this).parents('#six').find('.slide-box').animate({'left':'+=100%'},300);
+			};
+			$(this).parents('#six').find('.btn-next').show();
+			if(pgVar06 == 0){
+				$(this).parents('#six').find('.btn-prev').hide();
+			}
+		};
+	});
+
+	// 일곱번째 슬라이드 영역
+	var pgVar07 = 0;
+	$('#seven button').click( function(){
+		var boxLen = $(this).parents('#seven').find('.slide-box').length;
+		if($(this).hasClass('btn-next')){
+			if(pgVar07 < boxLen - 1){
+				pgVar07++;
+				$(this).parents('#seven').find('.slide-box').animate({'left':'-=100%'},300);
+				$(this).parents('#seven').find('.btn-prev').show();
+				if(pgVar07 == boxLen - 1){
+					$(this).parents('#seven').find('.btn-next').hide();
+				}
+				console.log(pgVar07);
+			};
+		} else {
+			if(pgVar07 > 0){
+				pgVar07--;
+				$(this).parents('#seven').find('.slide-box').animate({'left':'+=100%'},300);
+			};
+			$(this).parents('#seven').find('.btn-next').show();
+			if(pgVar07 == 0){
+				$(this).parents('#seven').find('.btn-prev').hide();
 			}
 		};
 	});
