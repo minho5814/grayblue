@@ -134,8 +134,8 @@ button {outline:0;vertical-align:top;}
 .nav li:nth-child(12) a {background-color:#80deea;}
 .nav li:nth-child(13) a {background-color:#000;}
 */
+.nav li.on a {border-color:#ddd; background-color:rgba(255,255,255,.9);}
 
-.nav li.on a {border-color:#ddd; background-color:#fff;}
 /* content */
 .parallax-box,
 .parallax-box .slide-box {
