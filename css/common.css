@@ -77,19 +77,65 @@ button {outline:0;vertical-align:top;}
 /* navi */
 .nav {
 	position:fixed;
-	right:20px;top:50px;
+	right:20px;top:40px;
 	z-index:50;
 }
-.nav li {margin:15px 0;}
+.nav li {}
 .nav li a {
 	display:block;
-	width:15px;
-	height:15px;
-	border-radius:50%;
-	border:1px solid #000;
-	background-color:#fff;
+	width:30px;
+	height:20px;
+	border:1px solid #fff;
+	font-size:0;
+	line-height:0;
 }
-.nav li.on a {border:1px solid #fff;background-color:#000;}
+.nav li:first-child a {background-color:#90caf8;}
+.nav li:nth-child(2) a {background-color:#9ea8db;}
+.nav li:nth-child(3) a {background-color:#b39ddb;}
+.nav li:nth-child(4) a {background-color:#cf93d9;}
+.nav li:nth-child(5) a {background-color:#f48fb1;}
+.nav li:nth-child(6) a {background-color:#ee9a9a;}
+.nav li:nth-child(7) a {background-color:#ffe0b2;}
+.nav li:nth-child(8) a {background-color:#ffecb2;}
+.nav li:nth-child(9) a {background-color:#e6ee9b;}
+.nav li:nth-child(10) a {background-color:#c5e1a6;}
+.nav li:nth-child(11) a {background-color:#a5d6a7;}
+.nav li:nth-child(12) a {background-color:#80deea;}
+.nav li:nth-child(13) a {background-color:#dbdbdb;}
+
+
+.nav li:first-child a {background-color:#0e47a1;}
+.nav li:nth-child(2) a {background-color:#1a237e;}
+.nav li:nth-child(3) a {background-color:#301b92;}
+.nav li:nth-child(4) a {background-color:#4a148c;}
+.nav li:nth-child(5) a {background-color:#890e4f;}
+.nav li:nth-child(6) a {background-color:#b71c1a;}
+.nav li:nth-child(7) a {background-color:#e65100;}
+.nav li:nth-child(8) a {background-color:#ff6f00;}
+.nav li:nth-child(9) a {background-color:#817716;}
+.nav li:nth-child(10) a {background-color:#33691e;}
+.nav li:nth-child(11) a {background-color:#1c5e20;}
+.nav li:nth-child(12) a {background-color:#016064;}
+.nav li:nth-child(13) a {background-color:#000;}
+
+
+/*
+.nav li:first-child a {background-color:#0e47a1;}
+.nav li:nth-child(2) a {background-color:#9ea8db;}
+.nav li:nth-child(3) a {background-color:#301b92;}
+.nav li:nth-child(4) a {background-color:#cf93d9;}
+.nav li:nth-child(5) a {background-color:#890e4f;}
+.nav li:nth-child(6) a {background-color:#ee9a9a;}
+.nav li:nth-child(7) a {background-color:#e65100;}
+.nav li:nth-child(8) a {background-color:#ffecb2;}
+.nav li:nth-child(9) a {background-color:#817716;}
+.nav li:nth-child(10) a {background-color:#c5e1a6;}
+.nav li:nth-child(11) a {background-color:#1c5e20;}
+.nav li:nth-child(12) a {background-color:#80deea;}
+.nav li:nth-child(13) a {background-color:#000;}
+*/
+
+.nav li.on a {border-color:#ddd; background-color:#fff;}
 /* content */
 .parallax-box,
 .parallax-box .slide-box {
