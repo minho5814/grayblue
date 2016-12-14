@@ -21,12 +21,15 @@ $(window).load(function(){
 		var $direct=$('.parallax-box');
 		$direct.each(function(index){
 			$directOffset=$direct.eq(index).offset().top - 300;
+			// 네비게이션 블릿
 			if(winScroll >= $directOffset) {
 				$('.nav li').eq(index).addClass('on').siblings().removeClass('on');
 			}
+			// 이전, 다음 버튼 해당영역에서 노출
 			if(winScroll >= $directOffset + 200) {
 				$direct.eq(index).find('.btn-area').show();
 			}
+			// 이전, 다음 버튼 해당영역에서 벗어나면 하이드
 			if(winScroll >= $directOffset + 400) {
 				$('.slide-area .btn-area').hide();
 			}
