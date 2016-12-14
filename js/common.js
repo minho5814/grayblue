@@ -65,7 +65,6 @@ $(window).load(function(){
 				if(pgVar01 == boxLen - 1){
 					$(this).parents('#cont01').find('.btn-next').hide();
 				}
-				console.log(pgVar01);
 			};
 		} else {
 			if(pgVar01 > 0){
@@ -91,7 +90,6 @@ $(window).load(function(){
 				if(pgVar02 == boxLen - 1){
 					$(this).parents('#cont02').find('.btn-next').hide();
 				}
-				console.log(pgVar02);
 			};
 		} else {
 			if(pgVar02 > 0){
@@ -117,7 +115,6 @@ $(window).load(function(){
 				if(pgVar03 == boxLen - 1){
 					$(this).parents('#cont03').find('.btn-next').hide();
 				}
-				console.log(pgVar03);
 			};
 		} else {
 			if(pgVar03 > 0){
@@ -143,7 +140,6 @@ $(window).load(function(){
 				if(pgVar04 == boxLen - 1){
 					$(this).parents('#cont04').find('.btn-next').hide();
 				}
-				console.log(pgVar04);
 			};
 		} else {
 			if(pgVar04 > 0){
@@ -169,7 +165,6 @@ $(window).load(function(){
 				if(pgVar05 == boxLen - 1){
 					$(this).parents('#cont05').find('.btn-next').hide();
 				}
-				console.log(pgVar05);
 			};
 		} else {
 			if(pgVar05 > 0){
@@ -195,7 +190,6 @@ $(window).load(function(){
 				if(pgVar06 == boxLen - 1){
 					$(this).parents('#cont06').find('.btn-next').hide();
 				}
-				console.log(pgVar06);
 			};
 		} else {
 			if(pgVar06 > 0){
@@ -221,7 +215,6 @@ $(window).load(function(){
 				if(pgVar07 == boxLen - 1){
 					$(this).parents('#cont07').find('.btn-next').hide();
 				}
-				console.log(pgVar07);
 			};
 		} else {
 			if(pgVar07 > 0){
@@ -247,7 +240,6 @@ $(window).load(function(){
 				if(pgVar08 == boxLen - 1){
 					$(this).parents('#cont08').find('.btn-next').hide();
 				}
-				console.log(pgVar08);
 			};
 		} else {
 			if(pgVar08 > 0){
@@ -273,7 +265,6 @@ $(window).load(function(){
 				if(pgVar09 == boxLen - 1){
 					$(this).parents('#cont09').find('.btn-next').hide();
 				}
-				console.log(pgVar09);
 			};
 		} else {
 			if(pgVar09 > 0){
@@ -299,7 +290,6 @@ $(window).load(function(){
 				if(pgVar10 == boxLen - 1){
 					$(this).parents('#cont10').find('.btn-next').hide();
 				}
-				console.log(pgVar10);
 			};
 		} else {
 			if(pgVar10 > 0){
@@ -325,7 +315,6 @@ $(window).load(function(){
 				if(pgVar11 == boxLen - 1){
 					$(this).parents('#cont11').find('.btn-next').hide();
 				}
-				console.log(pgVar11);
 			};
 		} else {
 			if(pgVar11 > 0){
@@ -351,7 +340,6 @@ $(window).load(function(){
 				if(pgVar12 == boxLen - 1){
 					$(this).parents('#cont12').find('.btn-next').hide();
 				}
-				console.log(pgVar12);
 			};
 		} else {
 			if(pgVar12 > 0){
@@ -377,7 +365,6 @@ $(window).load(function(){
 				if(pgVar13 == boxLen - 1){
 					$(this).parents('#cont13').find('.btn-next').hide();
 				}
-				console.log(pgVar13);
 			};
 		} else {
 			if(pgVar13 > 0){
