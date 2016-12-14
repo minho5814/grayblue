@@ -1,19 +1,19 @@
 $(window).load(function(){
 	$('.nav').localScroll(500);
 
-	$('#cont01 .slide-box').parallax("50%", 0.3);
-	$('#cont02 .slide-box').parallax("50%", 0.3);
-	$('#cont03 .slide-box').parallax("50%", 0.3);
-	$('#cont04 .slide-box').parallax("50%", 0.3);
-	$('#cont05 .slide-box').parallax("50%", 0.3);
-	$('#cont06 .slide-box').parallax("50%", 0.3);
-	$('#cont07 .slide-box').parallax("50%", 0.3);
-	$('#cont08 .slide-box').parallax("50%", 0.3);
-	$('#cont09 .slide-box').parallax("50%", 0.3);
-	$('#cont10 .slide-box').parallax("50%", 0.3);
-	$('#cont11 .slide-box').parallax("50%", 0.3);
-	$('#cont12 .slide-box').parallax("50%", 0.3);
-	$('#cont13 .slide-box').parallax("50%", 0.3);
+	$('#cont01 .slide-box').parallax('50%', 0.3);
+	$('#cont02 .slide-box').parallax('50%', 0.3);
+	$('#cont03 .slide-box').parallax('50%', 0.3);
+	$('#cont04 .slide-box').parallax('50%', 0.3);
+	$('#cont05 .slide-box').parallax('50%', 0.3);
+	$('#cont06 .slide-box').parallax('50%', 0.3);
+	$('#cont07 .slide-box').parallax('50%', 0.3);
+	$('#cont08 .slide-box').parallax('50%', 0.3);
+	$('#cont09 .slide-box').parallax('50%', 0.3);
+	$('#cont10 .slide-box').parallax('50%', 0.3);
+	$('#cont11 .slide-box').parallax('50%', 0.3);
+	$('#cont12 .slide-box').parallax('50%', 0.3);
+	$('#cont13 .slide-box').parallax('50%', 0.3);
 
 
 	$(window).scroll(function(){
@@ -29,7 +29,7 @@ $(window).load(function(){
 			if(winScroll >= $directOffset + 200) {
 				$direct.eq(index).find('.btn-area').show();
 			}
-			// 이전, 다음 버튼 해당영역에서 벗어나면 하이드
+			// 이전, 다음 버튼 해당영역에서 벗어나면 히든
 			if(winScroll >= $directOffset + 400) {
 				$('.slide-area .btn-area').hide();
 			}
