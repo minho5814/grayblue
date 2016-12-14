@@ -102,6 +102,8 @@ button {outline:0;vertical-align:top;}
 	position:absolute;
 	left:0;top:0;
 }
+.slide-area .btn-area {display:none;}
+.slide-area:first-child .btn-area {display:block;}
 .slide-area .btn-prev {
 	position:absolute;
 	left:50px;top:50%;

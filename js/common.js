@@ -21,8 +21,14 @@ $(window).load(function(){
 		var $direct=$('.parallax-box');
 		$direct.each(function(index){
 			$directOffset=$direct.eq(index).offset().top - 300;
-			if (winScroll >= $directOffset) {
+			if(winScroll >= $directOffset) {
 				$('.nav li').eq(index).addClass('on').siblings().removeClass('on');
+			}
+			if(winScroll >= $directOffset + 200) {
+				$direct.eq(index).find('.btn-area').show();
+			}
+			if(winScroll >= $directOffset + 400) {
+				$('.slide-area .btn-area').hide();
 			}
 		});
 
@@ -38,7 +44,7 @@ $(window).load(function(){
 	$('.slide-area').each(function(){
 		var boxLen = $(this).find('.slide-box').length;
 		if(boxLen >= 2){
-			$(this).append('<button type="button" class="btn-prev" style="display:none;">이전</button><button type="button" class="btn-next">다음</button>');
+			$(this).append('<div class="btn-area"><button type="button" class="btn-prev" style="display:none;">이전</button><button type="button" class="btn-next">다음</button></div>');
 		}
 	});
 
