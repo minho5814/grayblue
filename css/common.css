@@ -165,9 +165,7 @@ button {outline:0;vertical-align:top;}
 	.navi-list.list3.on .item2.on {background-color:#cc3333;}/* on */
 
 /* solider */
-.content {
-	position:relative;
-}
+.content {position:relative;}
 
 .slide-list {}
 	.slide-item {
@@ -188,7 +186,7 @@ button {outline:0;vertical-align:top;}
 	.content .bx-controls-direction .bx-prev {left:50px;}
 	.content .bx-controls-direction .bx-next {right:50px;}
 .content {}
-
+	.content .slide-item {opacity:.5;}
 	.content1 .slide-item.item1 {background-color:#0047ab;}
 	.content1 .slide-item.item2 {background-color:#0070ff;}
 	.content1 .slide-item.item3 {background-color:#1e90ff;}
