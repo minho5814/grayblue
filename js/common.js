@@ -1,4 +1,6 @@
 var isScroll = false;
+var sSpeed = 400;
+var dSpeed = sSpeed + 100;
 
 $(window).load(function(){
 	// 컨텐츠 높이 조절
@@ -32,9 +34,6 @@ $(window).load(function(){
 		speed:400
 	});
 
-
-	var sSpeed = 400;
-	var dSpeed = sSpeed + 200;
 	/* 네비게이션 클릭 */
 	$('.navi-item').click(function(){
 		var listIdx = $(this).parents('.navi-list').index();

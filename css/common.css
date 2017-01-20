@@ -98,6 +98,8 @@ button {outline:0;vertical-align:top;}
 /* =========================================================================================================
 	Layout
 ========================================================================================================= */
+html {overflow:hidden;}
+
 .container {}
 
 /* navigation */
@@ -163,6 +165,7 @@ button {outline:0;vertical-align:top;}
 	.navi-list.list3.on .item1.on {background-color:#b22222;}/* on */
 	.navi-list.list3 .item2 {border-color:#cc3333;}
 	.navi-list.list3.on .item2.on {background-color:#cc3333;}/* on */
+
 
 /* solider */
 .content {position:relative;}
