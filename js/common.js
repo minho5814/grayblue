@@ -40,12 +40,14 @@ $(window).load(function(){
 		var itemIdx = $(this).index();
 		$('.navi-list').removeClass('on');
 		$(this).addClass('on').parent('.navi-list').addClass('on');
-		$(this).siblings('.navi-item').removeClass('on')
+		$(this).siblings('.navi-item').removeClass('on');
 		var onIdx = $('.navi-list.on').index();
 		var conH = $('.content').outerHeight();
-		var top = conH*onIdx;
+		var top = conH * onIdx;
 		$('html,body').animate({scrollTop:top},sSpeed);
 		$('.content').eq(listIdx).find('.bx-pager-item').eq(itemIdx).find('a').click();
+
+		var navIdx = $(this).parent('.navi-list').index();
 	});
 
 	/* 이전/다음 버튼 */
@@ -61,7 +63,7 @@ $(window).load(function(){
 	$('.container').bind('mousewheel DOMMouseScroll touchmove', function (event) {
 		//console.log(event.originalEvent.wheelDelta);
 		if (!isScroll) {
-			isScroll = true; // Scroll 중에 Scroll 동작 방지
+			isScroll = true;// Scroll 중에 Scroll 동작 방지
 
 			setTimeout(function(){isScroll = false;},dSpeed);
 
