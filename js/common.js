@@ -44,8 +44,21 @@ $(window).load(function(){
 		var onIdx = $('.navi-list.on').index();
 		var conH = $('.content').outerHeight();
 		var top = conH * onIdx;
+
+		$('.content').removeClass('on').eq(onIdx).addClass('on');
+		$('.content .slide-list .square-60').animate({'margin-left':'-200%'},800);
+		$('.content .slide-list .h1-logo').animate({'margin-left':'-100%'},800,function(){
+			$('.content').eq(listIdx).find('.bx-pager-item').eq(itemIdx).find('a').click();// 슬라이드 처음 영역으로 이동
+			$('html,body').animate({scrollTop:top},sSpeed,function(){
+				$('.content.on .slide-list .h1-logo').animate({'margin-left':'0'},200);
+				$('.content.on .slide-list .square-60').animate({'margin-left':'0'},200);
+			});
+		});
+
+		/*
 		$('html,body').animate({scrollTop:top},sSpeed);// 해당 뎁스로 스크롤 이동
 		$('.content').eq(listIdx).find('.bx-pager-item').eq(itemIdx).find('a').click();// 슬라이드 처음 영역으로 이동
+		*/
 
 		var navIdx = $(this).parent('.navi-list').index();
 	});

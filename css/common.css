@@ -206,7 +206,8 @@ html {overflow:hidden;}
 
 .slide-list {}
 	.slide-item {
-		width:1000px;
+		overflow:hidden;
+		width:100%;
 		min-height:900px;
 	}
 
