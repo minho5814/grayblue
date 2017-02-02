@@ -44,8 +44,8 @@ $(window).load(function(){
 		var onIdx = $('.navi-list.on').index();
 		var conH = $('.content').outerHeight();
 		var top = conH * onIdx;
-		$('html,body').animate({scrollTop:top},sSpeed);
-		$('.content').eq(listIdx).find('.bx-pager-item').eq(itemIdx).find('a').click();
+		$('html,body').animate({scrollTop:top},sSpeed);// 해당 뎁스로 스크롤 이동
+		$('.content').eq(listIdx).find('.bx-pager-item').eq(itemIdx).find('a').click();// 슬라이드 처음 영역으로 이동
 
 		var navIdx = $(this).parent('.navi-list').index();
 	});
