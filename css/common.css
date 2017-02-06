@@ -225,6 +225,7 @@ html {overflow:hidden;}
 		text-indent:-9999px;
 		line-height:0;
 	}
+	.content .bx-controls-direction a.disabled {display:none;}
 	.content .bx-controls-direction .bx-prev {
 		left:50px;
 		background-image:url(../img/btn/btn_prev.png);

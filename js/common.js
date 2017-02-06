@@ -15,6 +15,7 @@ $(window).load(function(){
 	$('.content1 .slide-list').bxSlider({
 		//다음 이전 버튼 controls:false,
 		infiniteLoop:false,
+		hideControlOnEnd:true,
 		auto:false,
 		autoControls:true,
 		speed:400// Slide Speed (default:500)
@@ -22,6 +23,7 @@ $(window).load(function(){
 
 	$('.content2 .slide-list').bxSlider({
 		infiniteLoop:false,
+		hideControlOnEnd:true,
 		auto:false,
 		autoControls:true,
 		speed:400
@@ -29,6 +31,7 @@ $(window).load(function(){
 
 	$('.content3 .slide-list').bxSlider({
 		infiniteLoop:false,
+		hideControlOnEnd:true,
 		auto:false,
 		autoControls:true,
 		speed:400
