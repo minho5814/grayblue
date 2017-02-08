@@ -21,7 +21,7 @@ $(window).load(function(){
 				$('.section .slide .inner .center-text').css({'margin':'-150% 0 0 0'});
 			});
 
-			$('.fp-next').html('<p></p>');
+			$('.fp-next, .fp-slidesNav').css('opacity', '0');
 		},
 		//슬라이드 완료시
 		afterLoad: function(anchorLink, index){
@@ -66,6 +66,7 @@ $(window).load(function(){
 
 				$('.fp-next').html('<p>G</p>');
 			}
+			$('.fp-next, .fp-slidesNav').delay(800).animate({'opacity':'1'},100);
 		}
 	});
 

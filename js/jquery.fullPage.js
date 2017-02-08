@@ -316,18 +316,18 @@
 			moveSlide('next');
 
 			// 슬라이드 다음 (추가)
-			$('.fp-prev, .fp-next').css('opacity','0');
-			$('.section').find('.h1-logo, .text-area, .quotation-box, .title-box').stop().animate({'margin':'0 0 0 -130%', 'opacity':'0'},400);
+			$('.fp-prev, .fp-next').css('opacity', '0');
+			$('.section').find('.h1-logo, .text-area, .quotation-box, .title-box').stop().animate({'margin':'0 0 0 -130%', 'opacity':'0'}, 400);
 			$('.section .title-box').stop().animate({'margin':'0 0 0 -200%', 'opacity':'0'},400);
-			$('.section .slide .inner .center-text').stop().animate({'margin':'0 0 0 -150%','opacity':'0'},400,function(){
+			$('.section .slide .inner .center-text').stop().animate({'margin':'0 0 0 -150%', 'opacity':'0'}, 400, function(){
 				$('.section').find('.h1-logo, .text-area, .quotation-box, .title-box').css({'margin':'0 -130% 0 0'});
 				$('.section .slide .inner .center-text').css({'margin':'0 -150% 0 0'});
 
 				$('.section').find('.h1-logo, .text-area, .quotation-box, .title-box').stop().animate({'margin':'0', 'opacity':'1'}, 500);
-				$('.section .slide .inner .center-text').delay(100).stop().animate({'margin':'0 0 0 -20px','opacity':'1'},500,function(){
-					$(this).stop().animate({'margin':'0 0 0 20px'},200,function(){
-						$(this).stop().animate({'margin':'0'},200, function(){
-							$('.fp-prev, .fp-next').css('opacity','1');
+				$('.section .slide .inner .center-text').delay(100).stop().animate({'margin':'0 0 0 -20px', 'opacity':'1'},500,function(){
+					$(this).stop().animate({'margin':'0 0 0 20px'}, 200, function(){
+						$(this).stop().animate({'margin':'0'}, 200, function(){
+							$('.fp-prev, .fp-next').css('opacity', '1');
 						});
 					});
 				});
@@ -374,16 +374,19 @@
 			moveSlide('prev');
 
 			// 슬라이드 다음 (이전)
-			$('.section').find('.h1-logo, .text-area, .quotation-box, .title-box').stop().animate({'margin':'0 -130% 0 0', 'opacity':'0'},400);
-			$('.section .title-box').stop().animate({'margin':'0 -200% 0 0', 'opacity':'0'},400);
-			$('.section .slide .inner .center-text').stop().animate({'margin':'0 -150% 0 0','opacity':'0'},400,function(){
+			$('.fp-prev, .fp-next').css('opacity','0');
+			$('.section').find('.h1-logo, .text-area, .quotation-box, .title-box').stop().animate({'margin':'0 -130% 0 0', 'opacity':'0'}, 400);
+			$('.section .title-box').stop().animate({'margin':'0 -200% 0 0', 'opacity':'0'}, 400);
+			$('.section .slide .inner .center-text').stop().animate({'margin':'0 -150% 0 0', 'opacity':'0'}, 400, function(){
 				$('.section').find('.h1-logo, .text-area, .quotation-box, .title-box').css({'margin':'0 0 0 -130%'});
 				$('.section .slide .inner .center-text').css({'margin':'0 0 0 -150%'});
 
 				$('.section').find('.h1-logo, .text-area, .quotation-box, .title-box').stop().animate({'margin':'0', 'opacity':'1'}, 500);
-				$('.section .slide .inner .center-text').delay(100).stop().animate({'margin':'0 -20px 0 0','opacity':'1'},500,function(){
-					$(this).stop().animate({'margin':'0 20px 0 0'},200,function(){
-						$(this).stop().animate({'margin':'0'},200);
+				$('.section .slide .inner .center-text').delay(100).stop().animate({'margin':'0 -20px 0 0', 'opacity':'1'}, 500, function(){
+					$(this).stop().animate({'margin':'0 20px 0 0'}, 200, function(){
+						$(this).stop().animate({'margin':'0'}, 200, function(){
+							$('.fp-prev, .fp-next').css('opacity','1');
+						});
 					});
 				});
 			});
