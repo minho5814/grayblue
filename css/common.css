@@ -60,48 +60,12 @@ html.fp-enabled,
 	float:left;
 	position:relative;
 }
-.fp-controlArrow {
-	position:absolute;
-	z-index:4;
-	top:50%;
-	cursor:pointer;
-	width:60px;
-	height:20px;
-	margin-top:-38px;
-	background-repeat:no-repeat;
-	background-position:0 50%;
-	-webkit-transform:translate3d(0,0,0);
-	-ms-transform:translate3d(0,0,0);
-	transform:translate3d(0,0,0);
-}
-.fp-controlArrow.fp-prev {
-	left:15px;
-	background-image:url(../img/btn/btn_prev.png);
-}
-.fp-controlArrow.fp-next {
-	right:15px;
-	background-image:url(../img/btn/btn_next.png);
-}
 .fp-scrollable {
 	overflow:scroll;
 }
 .fp-notransition {
 	-webkit-transition:none !important;
 	transition:none !important;
-}
-#fp-nav {
-	position:fixed;
-	z-index:100;
-	margin-top:-32px;
-	top:50%;
-	opacity:1;
-	-webkit-transform:translate3d(0,0,0);
-}
-#fp-nav.right {
-	right:17px;
-}
-#fp-nav.left {
-	left:17px;
 }
 .fp-slidesNav{
 	position:absolute;
@@ -341,12 +305,40 @@ html {
 /* 네비게이션 */
 .navigation {
 	position:fixed;
-	right:50px;top:50px;
+	right:150px;top:50px;
 	z-index:500;
 }
-.navigation .nav-list {
-	overflow:hidden;
-}
+
+.navigation .title-area {margin-bottom:10px;}
+	.navigation .title-area p {
+		color:#0047ab;
+		font-family:Akrobat;
+		font-weight:700;
+		letter-spacing:1px;
+	}
+	.navigation .title-area .text1 {
+		font-size:13px;
+		line-height:17px;
+		opacity:.5;
+	}
+	.navigation .title-area .text2 {
+		font-size:20px;
+		line-height:24px;
+	}
+
+.fp-viewing-firstPage-0 .navigation .title-area p {color:#0047ab;}/* 01-01 */
+.fp-viewing-firstPage-1 .navigation .title-area p {color:#0070ff;}/* 01-02 */
+.fp-viewing-firstPage-2 .navigation .title-area p {color:#1e90ff;}/* 01-03 */
+.fp-viewing-firstPage-3 .navigation .title-area p {color:#00bfff;}/* 01-04 */
+
+.fp-viewing-secondPage-0 .navigation .title-area p {color:#4b0082;}/* 02-01 */
+.fp-viewing-secondPage-1 .navigation .title-area p {color:#800080;}/* 02-02 */
+.fp-viewing-secondPage-2 .navigation .title-area p {color:#9932cc;}/* 02-03 */
+
+.fp-viewing-3rdPage-0 .navigation .title-area p {color:#b22222;}/* 03-01 */
+.fp-viewing-3rdPage-1 .navigation .title-area p {color:#cc3333;}/* 03-02 */
+
+.navigation .nav-list {overflow:hidden;}
 .navigation .nav-item {
 	float:left;
 	margin:4px;
@@ -572,6 +564,61 @@ html {
 
 
 
+/* 이전/다음 버튼 */
+.fp-controlArrow {
+	position:absolute;
+	z-index:4;
+	top:50%;
+	cursor:pointer;
+	width:60px;
+	height:60px;
+	margin-top:-38px;
+	background-repeat:no-repeat;
+	background-position:0 50%;
+	-webkit-transform:translate3d(0,0,0);
+	-ms-transform:translate3d(0,0,0);
+	transform:translate3d(0,0,0);
+}
+.fp-controlArrow.fp-prev {
+	left:15px;
+	background-image:url(../img/btn/btn_prev.png);
+}
+.fp-controlArrow.fp-next {
+	right:15px;
+	background-image:url(../img/btn/btn_next.png);
+}
+.fp-controlArrow p {
+	height:60px;
+	font-family:Akrobat;
+	font-size:35px;
+	font-weight:900;
+	text-align:center;
+	line-height:60px;
+}
+
+/* 01-01 */
+.fp-viewing-firstPage-0 .fp-next p {color:#0070ff;}
+/* 01-02 */
+.fp-viewing-firstPage-1 .fp-prev p {color:#0047ab;}
+.fp-viewing-firstPage-1 .fp-next p {color:#1e90ff;}
+/* 01-03 */
+.fp-viewing-firstPage-2 .fp-prev p {color:#0070ff;}
+.fp-viewing-firstPage-2 .fp-next p {color:#00bfff;}
+/* 01-03 */
+.fp-viewing-firstPage-3 .fp-prev p {color:#1e90ff;}
+
+/* 02-01 */
+.fp-viewing-secondPage-0 .fp-next p {color:#800080;}
+/* 02-02 */
+.fp-viewing-secondPage-1 .fp-prev p {color:#4b0082;}
+.fp-viewing-secondPage-1 .fp-next p {color:#9932cc;}
+/* 02-03 */
+.fp-viewing-secondPage-2 .fp-prev p {color:#800080;}
+
+/* 03-01 */
+.fp-viewing-3rdPage-0 .fp-next p {color:#cc3333;}
+/* 03-02 */
+.fp-viewing-3rdPage-1 .fp-prev p {color:#b22222;}
 
 
 
