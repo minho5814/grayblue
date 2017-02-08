@@ -7,7 +7,7 @@ $(window).load(function(){
 		slidesNavigation: true,
 		slidesToSections: true,
 		loopHorizontal: false,//무한 스크롤
-		anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
+		anchors: ['index1', 'index2', 'index3'],
 
 		//슬라이드시
 		onLeave: function(anchorLink, index){
