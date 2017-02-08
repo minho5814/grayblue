@@ -1,4 +1,7 @@
 $(window).load(function(){
+	$('.h1-logo').click(function(){
+		location.reload();
+	});
 
 	$('.grayblue').fullpage({
 		scrollBar: false,//화면 스크롤 바 표시

@@ -410,15 +410,15 @@ html {
 		margin:-450px 0 0 -500px;
 	}
 	.section .slide .h1-logo {
+		position:relative;
+		z-index:5;
 		width:150px;
 		min-height:26px;
-		/*
-		margin:0 0 0 -130%;
-		*/
 		padding:62px 0;
 		font-size:0;
 		line-height:0;
 		text-align:center;
+		cursor:pointer;
 	}
 
 
