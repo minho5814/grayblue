@@ -318,7 +318,7 @@
 			// 슬라이드 다음 (추가)
 			$('.fp-prev, .fp-next').css('opacity', '0');
 
-			//01
+			//01 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 			if($('body').hasClass('fp-viewing-index1-0')){
 				$('.fp-next').html('<p>R</p>');
 			}
@@ -382,7 +382,7 @@
 				});
 			}
 
-			//02
+			//02 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 			if($('body').hasClass('fp-viewing-index2-0')){
 				$('.fp-next').html('<p>L</p>');
 			}
@@ -426,7 +426,7 @@
 				});
 			}
 
-			//03
+			//03 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 			if($('body').hasClass('fp-viewing-index3-0')){
 				$('.fp-next').html('<p>G</p>');
 			}
@@ -454,26 +454,8 @@
 		FP.moveSlideLeft = function(){
 			moveSlide('prev');
 
-			// 슬라이드 다음 (이전)
-			/*
-			$('.fp-prev, .fp-next').css('opacity','0');
-			$('.section').find('.h1-logo, .text-area, .quotation-box').stop().animate({'margin':'0 -130% 0 0', 'opacity':'0'}, 400);
-			$('.section .title-box').stop().animate({'margin':'0 -200% 0 0', 'opacity':'0'}, 400);
-			$('.section .slide .inner .center-text').stop().animate({'margin':'0 -150% 0 0', 'opacity':'0'}, 400, function(){
-				$('.section').find('.h1-logo, .text-area, .quotation-box, .title-box').css({'margin':'0 0 0 -130%'});
-				$('.section .slide .inner .center-text').css({'margin':'0 0 0 -150%'});
-
-				$('.section').find('.h1-logo, .text-area, .quotation-box, .title-box').stop().animate({'margin':'0', 'opacity':'1'}, 500);
-				$('.section .slide .inner .center-text').delay(100).stop().animate({'margin':'0 -20px 0 0', 'opacity':'1'}, 500, function(){
-					$(this).stop().animate({'margin':'0 20px 0 0'}, 200, function(){
-						$(this).stop().animate({'margin':'0'}, 200, function(){
-							$('.fp-prev, .fp-next').css('opacity','1');
-						});
-					});
-				});
-			});
-			*/
-
+			// 슬라이드 이전 (추가)
+			//01 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 			if($('body').hasClass('fp-viewing-index1-0')){
 				$('.fp-next').html('<p>R</p>');
 
@@ -537,7 +519,7 @@
 				$('.fp-prev').html('<p>A</p>');
 			}
 
-			//02
+			//02 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 			if($('body').hasClass('fp-viewing-index2-0')){
 				$('.fp-next').html('<p>L</p>');
 
@@ -581,7 +563,7 @@
 				$('.fp-prev').html('<p>L</p>');
 			}
 
-			//03
+			//03 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 			if($('body').hasClass('fp-viewing-index3-0')){
 				$('.fp-next').html('<p>G</p>');
 

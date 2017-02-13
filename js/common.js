@@ -5,7 +5,7 @@ $(window).load(function(){
 
 	$('.grayblue').fullpage({
 		scrollBar: false,//화면 스크롤 바 표시
-		//keyboardScrolling: false,//스크롤 키보드 제어
+		keyboardScrolling: false,//스크롤 키보드 제어
 		autoScrolling: true,//스크롤
 		slidesNavigation: true,
 		slidesToSections: true,
