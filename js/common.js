@@ -12,7 +12,7 @@ $(window).load(function(){
 		loopHorizontal: false,//무한 스크롤
 		anchors: ['index1', 'index2', 'index3'],
 
-		//슬라이드시
+		//스크롤시
 		onLeave: function(anchorLink, index){
 			$('.section').find('.h1-logo, .text-area, .quotation-box').stop().animate({'margin':'0 0 0 -130%', 'opacity':'0'}, 400);
 			$('.section .title-box').stop().animate({'margin':'0 -130% 0 0', 'opacity':'0'}, 400);
@@ -23,7 +23,7 @@ $(window).load(function(){
 
 			$('.fp-next, .fp-slidesNav').css('opacity', '0');
 		},
-		//슬라이드 완료시
+		//스크롤 완료시
 		afterLoad: function(anchorLink, index){
 			//section 1
 			if(index == 1){
