@@ -375,7 +375,7 @@
 
 			// 슬라이드 다음 (이전)
 			$('.fp-prev, .fp-next').css('opacity','0');
-			$('.section').find('.h1-logo, .text-area, .quotation-box, .title-box').stop().animate({'margin':'0 -130% 0 0', 'opacity':'0'}, 400);
+			$('.section').find('.h1-logo, .text-area, .quotation-box').stop().animate({'margin':'0 -130% 0 0', 'opacity':'0'}, 400);
 			$('.section .title-box').stop().animate({'margin':'0 -200% 0 0', 'opacity':'0'}, 400);
 			$('.section .slide .inner .center-text').stop().animate({'margin':'0 -150% 0 0', 'opacity':'0'}, 400, function(){
 				$('.section').find('.h1-logo, .text-area, .quotation-box, .title-box').css({'margin':'0 0 0 -130%'});
