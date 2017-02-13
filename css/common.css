@@ -1,165 +1,3 @@
-/**
- * fullPage 2.6.4
- * https://github.com/alvarotrigo/fullPage.js
- * MIT licensed
- *
- * Copyright (C) 2013 alvarotrigo.com - A project by Alvaro Trigo
- */
-html.fp-enabled,
-.fp-enabled body {
-	margin:0;
-	padding:0;
-	overflow:hidden;
-
-	/*Avoid flicker on slides transitions for mobile phones #336 */
-	-webkit-tap-highlight-color:rgba(0,0,0,0);
-}
-#superContainer {
-	height:100%;
-	position:relative;
-
-	/* Touch detection for Windows 8 */
-	-ms-touch-action:none;
-
-	/* IE 11 on Windows Phone 8.1*/
-	touch-action:none;
-}
-.fp-section {
-	position:relative;
-	-webkit-box-sizing:border-box;
-	-moz-box-sizing:border-box;
-	box-sizing:border-box;
-}
-.fp-slide {float:left;}
-.fp-slide, .fp-slidesContainer {
-	height:100%;
-	display:block;
-}
-.fp-slides {
-	z-index:1;
-	overflow:hidden;
-	position:relative;
-	height:100%;
-	-webkit-transition:all 0.3s ease-out;
-	transition:all 0.3s ease-out;
-}
-.fp-section.fp-table, .fp-slide.fp-table {
-	display:table;
-	table-layout:fixed;
-	width:100%;
-}
-.fp-tableCell {
-	display:table-cell;
-	vertical-align:middle;
-	width:100%;
-	height:100%;
-}
-.fp-slidesContainer {
-	float:left;
-	position:relative;
-}
-.fp-scrollable {overflow:scroll;}
-.fp-notransition {
-	-webkit-transition:none !important;
-	transition:none !important;
-}
-.fp-slidesNav{
-	z-index:4;
-	position:absolute;
-	left:50%;
-	opacity:1;
-}
-.fp-slidesNav.bottom {bottom:50px;}
-.fp-slidesNav.top {top:50px;}
-.fp-slidesNav ul {
-	margin:0;
-	padding:0;
-}
-.fp-slidesNav ul li {
-	display:block;
-	position:relative;
-	width:20px;
-	height:20px;
-	margin:0 4px;
-}
-.fp-slidesNav ul li {display:inline-block;}
-.fp-slidesNav ul li a {
-	z-index:1;
-	display:block;
-	position:relative;
-	width:100%;
-	height:100%;
-	text-decoration:none;
-	cursor:pointer;
-}
-.fp-slidesNav ul li a span {
-	z-index:1;
-	position:absolute;
-	left:50%;top:50%;
-	height:6px;
-	width:6px;
-	border:0;
-	border-radius:100%;
-	background-color:#0047ab;
-	margin:-3px 0 0 -3px;
-	-webkit-transition:all 0.1s ease-in-out;
-	-moz-transition:all 0.1s ease-in-out;
-	-o-transition:all 0.1s ease-in-out;
-	transition:all 0.1s ease-in-out;
-}
-.fp-slidesNav ul li:hover a span{
-	width:10px;
-	height:10px;
-	margin:-5px 0px 0px -5px;
-}
-.fp-slidesNav ul li a.active span,
-.fp-slidesNav ul li:hover a.active span{
-	height:12px;
-	width:12px;
-	margin:-6px 0 0 -6px;
-}
-
-.fp-viewing-index1-0 .fp-slidesNav ul li a span {background-color:#0047ab;}/* 01-01 */
-.fp-viewing-index1-1 .fp-slidesNav ul li a span {background-color:#0070ff;}/* 01-02 */
-.fp-viewing-index1-2 .fp-slidesNav ul li a span {background-color:#1e90ff;}/* 01-03 */
-.fp-viewing-index1-3 .fp-slidesNav ul li a span {background-color:#00bfff;}/* 01-04 */
-
-.fp-viewing-index2-0 .fp-slidesNav ul li a span {background-color:#4b0082;}/* 02-01 */
-.fp-viewing-index2-1 .fp-slidesNav ul li a span {background-color:#800080;}/* 02-02 */
-.fp-viewing-index2-2 .fp-slidesNav ul li a span {background-color:#9932cc;}/* 02-03 */
-
-.fp-viewing-index3-0 .fp-slidesNav ul li a span {background-color:#b22222;}/* 03-01 */
-.fp-viewing-index3-1 .fp-slidesNav ul li a span {background-color:#cc3333;}/* 03-02 */
-
-#fp-nav ul li .fp-tooltip {
-	position:absolute;
-	top:-2px;
-	color:#fff;
-	font-size:14px;
-	font-family:arial, helvetica, sans-serif;
-	white-space:nowrap;
-	max-width:220px;
-	overflow:hidden;
-	display:block;
-	opacity:0;
-	width:0;
-}
-#fp-nav ul li:hover .fp-tooltip,
-#fp-nav.fp-show-active a.active + .fp-tooltip {
-	-webkit-transition:opacity 0.2s ease-in;
-	transition:opacity 0.2s ease-in;
-	width:auto;
-	opacity:1;
-}
-#fp-nav ul li .fp-tooltip.right {
-	right:20px;
-}
-#fp-nav ul li .fp-tooltip.left {
-	left:20px;
-}
-
-
-
 /* =========================================================================================================
 	Font
 ========================================================================================================= */
@@ -217,8 +55,6 @@ html.fp-enabled,
 	url(font/AkrobatSBold.woff) format('woff'),
 	url(font/AkrobatSBold.ttf) format('truetype');
 }
-
-
 
 /* =========================================================================================================
 	Reset
@@ -278,6 +114,136 @@ caption {visibility:hidden;overflow:hidden;width:0;height:0;font-size:0;line-hei
 table {table-layout:fixed;width:100%;margin:0;padding:0;border-spacing:0;border:0;border-collapse:collapse;}
 *+html table {border-collapse:collapse;}
 button {outline:0;vertical-align:top;}
+
+/* =========================================================================================================
+	fullPage
+========================================================================================================= */
+/**
+	* fullPage 2.6.4
+	* https://github.com/alvarotrigo/fullPage.js
+	* MIT licensed
+	*
+	* Copyright (C) 2013 alvarotrigo.com - A project by Alvaro Trigo
+*/
+html.fp-enabled,
+.fp-enabled body {
+	overflow:hidden;
+	margin:0;
+	padding:0;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+#superContainer {
+	position:relative;
+	height:100%;
+	-ms-touch-action:none;/* Touch detection for Windows 8 */
+	touch-action:none;/* IE 11 on Windows Phone 8.1*/
+}
+.fp-section {
+	position:relative;
+	box-sizing:border-box;
+}
+.fp-slide {float:left;}
+.fp-slide,
+.fp-slidesContainer {
+	display:block;
+	height:100%;
+}
+.fp-slides {
+	overflow:hidden;
+	position:relative;
+	z-index:1;
+	height:100%;
+	-webkit-transition:all 0.3s ease-out;
+	transition:all 0.3s ease-out;
+}
+.fp-section.fp-table,
+.fp-slide.fp-table {
+	display:table;
+	table-layout:fixed;
+	width:100%;
+}
+.fp-tableCell {
+	display:table-cell;
+	width:100%;
+	height:100%;
+	vertical-align:middle;
+}
+.fp-slidesContainer {
+	float:left;
+	position:relative;
+}
+.fp-scrollable {overflow:scroll;}
+.fp-notransition {
+	-webkit-transition:none !important;
+	transition:none !important;
+}
+.fp-slidesNav{
+	position:absolute;
+	left:50%;
+	z-index:4;
+	opacity:1;
+}
+.fp-slidesNav.bottom {bottom:50px;}
+.fp-slidesNav.top {top:50px;}
+.fp-slidesNav ul {
+	margin:0;
+	padding:0;
+}
+.fp-slidesNav ul li {
+	display:block;
+	position:relative;
+	width:20px;
+	height:20px;
+	margin:0 4px;
+}
+.fp-slidesNav ul li {display:inline-block;}
+.fp-slidesNav ul li a {
+	display:block;
+	position:relative;
+	z-index:1;
+	width:100%;
+	height:100%;
+	text-decoration:none;
+	cursor:pointer;
+}
+.fp-slidesNav ul li a span {
+	position:absolute;
+	left:50%;top:50%;
+	z-index:1;
+	height:6px;
+	width:6px;
+	margin:-3px 0 0 -3px;
+	border-radius:100%;
+	border:0;
+	background-color:#0047ab;
+	-webkit-transition:all 0.1s ease-in-out;
+	-moz-transition:all 0.1s ease-in-out;
+	-o-transition:all 0.1s ease-in-out;
+	transition:all 0.1s ease-in-out;
+}
+.fp-slidesNav ul li:hover a span{
+	width:10px;
+	height:10px;
+	margin:-5px 0px 0px -5px;
+}
+.fp-slidesNav ul li a.active span,
+.fp-slidesNav ul li:hover a.active span{
+	height:12px;
+	width:12px;
+	margin:-6px 0 0 -6px;
+}
+
+.fp-viewing-index1-0 .fp-slidesNav ul li a span {background-color:#0047ab;}/* 01-01 */
+.fp-viewing-index1-1 .fp-slidesNav ul li a span {background-color:#0070ff;}/* 01-02 */
+.fp-viewing-index1-2 .fp-slidesNav ul li a span {background-color:#1e90ff;}/* 01-03 */
+.fp-viewing-index1-3 .fp-slidesNav ul li a span {background-color:#00bfff;}/* 01-04 */
+
+.fp-viewing-index2-0 .fp-slidesNav ul li a span {background-color:#4b0082;}/* 02-01 */
+.fp-viewing-index2-1 .fp-slidesNav ul li a span {background-color:#800080;}/* 02-02 */
+.fp-viewing-index2-2 .fp-slidesNav ul li a span {background-color:#9932cc;}/* 02-03 */
+
+.fp-viewing-index3-0 .fp-slidesNav ul li a span {background-color:#b22222;}/* 03-01 */
+.fp-viewing-index3-1 .fp-slidesNav ul li a span {background-color:#cc3333;}/* 03-02 */
 
 /* =========================================================================================================
 	공통
@@ -415,21 +381,14 @@ html {
 		cursor:pointer;
 	}
 
-
 	.section .slide .text-area {
 		position:absolute;
 		left:0;top:190px;
-		/*
-		margin:0 0 0 -130%;
-		*/
 	}
 
 	.section .slide .quotation-box {
 		position:absolute;
 		left:0;top:535px;
-		/*
-		margin:0 0 0 -130%;
-		*/
 		padding-top:45px;
 		background-repeat:no-repeat;
 		background-position:0 0;
@@ -440,9 +399,6 @@ html {
 		position:absolute;
 		right:0;top:432px;
 		min-width:215px;
-		/*
-		margin:0 -130% 0 0;
-		*/
 	}
 		.section .slide .title-box .title {
 			position:relative;
@@ -464,7 +420,6 @@ html {
 			font-size:12px;
 		}
 
-
 .section .slide .h1-logo,
 .section .slide .text-area,
 .section .slide .quotation-box,
@@ -481,7 +436,6 @@ html {
 .blue.section .slide1 .quotation-box {background-image:url(../img/icon/quot_01_01.png);color:#0047ab;}
 .blue.section .slide1 .title-box {color:#0047ab;}
 .blue.section .slide1 .title-box .title:before {background-color:#0047ab;}
-
 /* 01-02 */
 .blue.section .slide2 .inner .center-text {color:#0070ff;}
 .blue.section .slide2 .h1-logo {background-color:#0070ff;}
@@ -489,7 +443,6 @@ html {
 .blue.section .slide2 .quotation-box {background-image:url(../img/icon/quot_01_02.png);color:#0070ff;}
 .blue.section .slide2 .title-box {color:#0070ff;}
 .blue.section .slide2 .title-box .title:before {background-color:#0070ff;}
-
 /* 01-03 */
 .blue.section .slide3 .inner .center-text {color:#1e90ff;}
 .blue.section .slide3 .h1-logo {background-color:#1e90ff;}
@@ -497,7 +450,6 @@ html {
 .blue.section .slide3 .quotation-box {background-image:url(../img/icon/quot_01_03.png);color:#1e90ff;}
 .blue.section .slide3 .title-box {color:#1e90ff;}
 .blue.section .slide3 .title-box .title:before {background-color:#1e90ff;}
-
 /* 01-04 */
 .blue.section .slide4 .inner .center-text {color:#00bfff;}
 .blue.section .slide4 .h1-logo {background-color:#00bfff;}
@@ -506,10 +458,6 @@ html {
 .blue.section .slide4 .title-box {color:#00bfff;}
 .blue.section .slide4 .title-box .title:before {background-color:#00bfff;}
 
-
-
-
-
 /* 02-01 */
 .purple.section .slide1 .inner .center-text {color:#4b0082;}
 .purple.section .slide1 .h1-logo {background-color:#4b0082;}
@@ -517,7 +465,6 @@ html {
 .purple.section .slide1 .quotation-box {background-image:url(../img/icon/quot_02_01.png);color:#4b0082;}
 .purple.section .slide1 .title-box {color:#4b0082;}
 .purple.section .slide1 .title-box .title:before {background-color:#4b0082;}
-
 /* 02-02 */
 .purple.section .slide2 .inner .center-text {color:#800080;}
 .purple.section .slide2 .h1-logo {background-color:#800080;}
@@ -525,7 +472,6 @@ html {
 .purple.section .slide2 .quotation-box {background-image:url(../img/icon/quot_02_02.png);color:#800080;}
 .purple.section .slide2 .title-box {color:#800080;}
 .purple.section .slide2 .title-box .title:before {background-color:#800080;}
-
 /* 02-03 */
 .purple.section .slide3 .inner .center-text {color:#9932cc;}
 .purple.section .slide3 .h1-logo {background-color:#9932cc;}
@@ -534,11 +480,6 @@ html {
 .purple.section .slide3 .title-box {color:#9932cc;}
 .purple.section .slide3 .title-box .title:before {background-color:#9932cc;}
 
-
-
-
-
-
 /* 03-01 */
 .red.section .slide1 .inner .center-text {color:#b22222;}
 .red.section .slide1 .h1-logo {background-color:#b22222;}
@@ -546,19 +487,15 @@ html {
 .red.section .slide1 .quotation-box {background-image:url(../img/icon/quot_03_01.png);color:#b22222;}
 .red.section .slide1 .title-box {color:#b22222;}
 .red.section .slide1 .title-box .title:before {background-color:#b22222;}
-
 /* 03-02 */
 .red.section .slide2 .inner .center-text {color:#cc3333;}
 .red.section .slide2 .h1-logo {background-color:#cc3333;}
 .red.section .slide2 .square-60 {color:#cc3333;}
-.red.section .slide2 .quotation-box {background-image:url(../img/icon/quot_03_02.png);color:#cc3333;}
 .red.section .slide2 .title-box {color:#cc3333;}
 .red.section .slide2 .title-box .title:before {background-color:#cc3333;}
 
-
-
-
 /* 이전/다음 버튼 */
+.red.section .slide2 .quotation-box {background-image:url(../img/icon/quot_03_02.png);color:#cc3333;}
 .fp-controlArrow {
 	position:absolute;
 	z-index:4;
@@ -614,8 +551,6 @@ html {
 /* 03-02 */
 .fp-viewing-index3-1 .fp-prev p {color:#b22222;}
 
-
-
 /* 포트폴리오 */
 .btn-portfolio {
 	display:none;
@@ -625,7 +560,6 @@ html {
 	height:50px;
 	border:1px solid #ccc;
 }
-
 
 .popup-wrap {
 	display:none;
