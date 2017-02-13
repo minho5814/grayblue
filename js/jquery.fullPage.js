@@ -390,6 +390,41 @@
 					});
 				});
 			});
+
+			if($('body').hasClass('fp-viewing-index1-0')){
+				$('.fp-next').html('<p>R</p>');
+			}
+			if($('body').hasClass('fp-viewing-index1-1')){
+				$('.fp-prev').html('<p>G</p>');
+				$('.fp-next').html('<p>A</p>');
+			}
+			if($('body').hasClass('fp-viewing-index1-2')){
+				$('.fp-prev').html('<p>R</p>');
+				$('.fp-next').html('<p>Y</p>');
+			}
+			if($('body').hasClass('fp-viewing-index1-3')){
+				$('.fp-prev').html('<p>A</p>');
+			}
+
+			//02
+			if($('body').hasClass('fp-viewing-index2-0')){
+				$('.fp-next').html('<p>L</p>');
+			}
+			if($('body').hasClass('fp-viewing-index2-1')){
+				$('.fp-prev').html('<p>B</p>');
+				$('.fp-next').html('<p>U</p>');
+			}
+			if($('body').hasClass('fp-viewing-index2-2')){
+				$('.fp-prev').html('<p>L</p>');
+			}
+
+			//03
+			if($('body').hasClass('fp-viewing-index3-0')){
+				$('.fp-next').html('<p>G</p>');
+			}
+			if($('body').hasClass('fp-viewing-index3-1')){
+				$('.fp-prev').html('<p>E</p>');
+			}
 		};
 
 		/**
