@@ -360,7 +360,7 @@ html {
 		font-size:800px;
 		font-weight:700;
 		text-align:center;
-		opacity:.8;
+		opacity:0;
 	}
 	.section .slide .inner {
 		position:absolute;
@@ -430,7 +430,7 @@ html {
 
 
 /* 01-01 */
-.blue.section .slide1 .inner .center-text {color:#0047ab;}
+.blue.section .slide1 .inner .center-text {color:#0047ab;opacity:1;}
 .blue.section .slide1 .h1-logo {background-color:#0047ab;}
 .blue.section .slide1 .square-60 {color:#0047ab;}
 .blue.section .slide1 .quotation-box {background-image:url(../img/icon/quot_01_01.png);color:#0047ab;}

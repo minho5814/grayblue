@@ -82,8 +82,8 @@ $(window).load(function(){
 		$('.fp-next p').html(nextTxt);
 	});
 	/* 로드시 화면 구성 */
-	$('.section').find('.h1-logo, .text-area, .quotation-box, .title-box').animate({'margin':'0', 'opacity':'1'}, 800);
-	$('.section .slide .inner .center-text').delay(100).animate({'margin':'20px 0 0 0', 'opacity':'1'}, 800, function(){
+	$('#section0').find('.h1-logo, .text-area, .quotation-box, .title-box').animate({'margin':'0', 'opacity':'1'}, 800);
+	$('#section0 .slide .inner .center-text').delay(100).animate({'margin':'20px 0 0 0', 'opacity':'1'}, 800, function(){
 		$(this).animate({'margin':'-20px 0 0 0'}, 200, function(){
 			$(this).animate({'margin':'0'}, 200);
 		});
