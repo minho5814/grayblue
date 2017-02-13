@@ -420,10 +420,10 @@ html {
 			font-size:12px;
 		}
 
-.section .slide .h1-logo,
-.section .slide .text-area,
-.section .slide .quotation-box,
-.section .slide .title-box {
+.h1-logo,
+.text-area,
+.quotation-box,
+.title-box {
 	margin:-130% 0 0 0;
 	opacity:0;
 }
