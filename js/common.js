@@ -93,6 +93,19 @@ $(window).load(function(){
 	$('.fp-prev').html('<p></p>');
 	$('.fp-next').html('<p>R</p>');
 
+	/* 이전/다음 버튼 애니메이션
+	$(document).on('mouseenter', '.fp-next', function(){
+		btnNext = setInterval(function(){
+			$('.fp-next p:not(:animated)').animate({'margin':'-5px 0 0'}, 200, function(){
+				$('.fp-next p:not(:animated)').animate({'margin':'0 0 -10px'}, 200);
+			});
+		}, 100);
+	});
+	$(document).on('mouseleave', '.fp-next', function(){
+		clearInterval(btnNext);
+	});
+	*/
+
 	/* 팝업 */
 	$('.btn-portfolio').click(function(){
 		$('.popup-wrap').show();
