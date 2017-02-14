@@ -105,9 +105,4 @@ $(window).load(function(){
 		clearInterval(btnNext);
 	});
 	*/
-
-	/* 팝업 */
-	$('.btn-portfolio').click(function(){
-		$('.popup-wrap').show();
-	});
 });

@@ -550,36 +550,3 @@ html {
 .fp-viewing-index3-0 .fp-next p {color:#cc3333;}
 /* 03-02 */
 .fp-viewing-index3-1 .fp-prev p {color:#b22222;}
-
-/* 포트폴리오 */
-.btn-portfolio {
-	display:none;
-	position:absolute;
-	right:0;top:100px;
-	width:100px;
-	height:50px;
-	border:1px solid #ccc;
-}
-
-.popup-wrap {
-	display:none;
-	overflow-y:auto;
-	position:fixed;
-	left:0;right:0;top:0;bottom:0;
-	z-index:500;
-	padding:50px 0;
-}
-.popup-wrap .deemed {
-	position:fixed;
-	left:0;right:0;top:0;bottom:0;
-	background:rgba(0,0,0,.7);
-}
-.popup-wrap .popup {
-	position:relative;
-	z-index:5;
-	width:100%;
-	max-width:1000px;
-	height:2000px;
-	margin:0 auto;
-	background-color:#fff;
-}
