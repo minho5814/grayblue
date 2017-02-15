@@ -352,6 +352,13 @@ html {
 	overflow:hidden;
 	position:relative;
 }
+	.section .slide .inner {
+		position:absolute;
+		left:50%;
+		width:1000px;
+		height:900px;
+		margin:-450px 0 0 -500px;
+	}
 	.section .slide .inner .center-text {
 		position:absolute;
 		left:0;right:0;top:-120px;
@@ -361,13 +368,6 @@ html {
 		font-weight:700;
 		text-align:center;
 		opacity:0;
-	}
-	.section .slide .inner {
-		position:absolute;
-		left:50%;top:50%;
-		width:1000px;
-		height:900px;
-		margin:-450px 0 0 -500px;
 	}
 	.section .slide .h1-logo {
 		position:relative;
