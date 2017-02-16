@@ -72,8 +72,8 @@ input[type=text] {
 	width:100%;
 	height:25px;
 	padding:0 10px;
-	border:1px solid #e6e6e6;
 	border-radius:0;
+	border:1px solid #e6e6e6;
 	background-color:#fff;
 	color:#666;
 	font-size:12px;
@@ -85,8 +85,8 @@ input[type=submit] {-webkit-border-radius:0;border:0;border-radius:0;-webkit-app
 textarea {
 	width:100%;
 	padding:8px 10px;
-	border:1px solid #dfdfdf;
 	border-radius:0;
+	border:1px solid #dfdfdf;
 	background-color:#fff;
 	-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;
 	color:#999;
@@ -97,8 +97,8 @@ textarea {
 select {
 	height:25px;
 	padding:0 0 0 10px;
-	border:1px solid #e6e6e6;
 	border-radius:0;
+	border:1px solid #e6e6e6;
 	background-color:#fff;
 	color:#666;
 	font-size:12px;
